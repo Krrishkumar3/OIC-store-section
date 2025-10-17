@@ -1,50 +1,58 @@
-.updates {
-  background-color: #f4f4f4;
-  padding: 40px;
-  text-align: center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px; /* Adjust padding as needed */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Arial, sans-serif; /* Use the actual font */
 }
 
-.updates h2 {
-  color: #003366;
-  margin-bottom: 20px;
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }
 
-.updates ul {
+.dtu-logo {
+  height: 50px; /* Adjust size */
+  margin-right: 15px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.university-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.department-name {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.navbar-nav {
   list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
 }
 
-.updates li {
-  margin: 10px 0;
-  font-weight: 500;
+.nav-item {
+  margin-left: 30px;
 }
 
-.updates-section {
-  background-color: #f5f7fa;
-  padding: 40px 0;
-}
-
-.updates-section h2 {
-  color: #003366;
-  margin-bottom: 20px;
-}
-
-.updates-section ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.updates-section li {
-  margin: 10px 0;
-}
-
-.updates-section a {
-  color: #004aad;
+.nav-link {
   text-decoration: none;
+  color: #333;
   font-weight: 500;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
 }
 
-.updates-section a:hover {
-  text-decoration: underline;
-  color: #007bff;
+.nav-link:hover {
+  color: #007bff; /* Example hover color */
 }
