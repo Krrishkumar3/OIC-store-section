@@ -12,7 +12,7 @@ function Updates() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Admissions Open for 2025 Batch
+            Accounts
           </a>
         </li>
         <li>
@@ -21,7 +21,7 @@ function Updates() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Golden Pride Function 2024 Highlights
+            Miscellaneous
           </a>
         </li>
         <li>
@@ -30,7 +30,7 @@ function Updates() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Scholarship Schemes for UG Students
+            Data entry
           </a>
         </li>
       </ul>

@@ -4,8 +4,8 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <section className="hero">
-      <h1>Delhi Technological University</h1>
-      <p>Formerly Delhi College of Engineering</p>
+      <h1>OIC STORE SECTION</h1>
+     
       <button>Learn More</button>
     </section>
   );
