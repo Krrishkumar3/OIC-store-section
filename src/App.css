@@ -51,3 +51,49 @@ html, body {
 .read-the-docs {
   color: #888;
 }
+
+/* src/App.css */
+
+/* Keep your existing styles and add this */
+
+.main-content {
+  display: flex;
+  justify-content: space-around; /* This will space out the two columns */
+  padding: 2rem;
+  gap: 2rem; /* Adds space between the columns */
+}
+
+/* Layout for the top area: news (left) and slider (right) */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* make children same height */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.news-section {
+  width: 33%;
+  min-width: 280px;
+  /* fix height to match slider and clip overflow */
+  height: 420px;
+  overflow: hidden;
+}
+
+.slider-container {
+  width: 67%;
+  height: 420px; /* match the news column height */
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .news-section, .slider-container {
+    width: 100%;
+    min-width: auto;
+  }
+}

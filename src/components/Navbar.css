@@ -1,23 +1,53 @@
-.navbar {
+.navbar-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #003366;
-  color: white;
-  padding: 15px 40px;
+  justify-content: space-between; /* Pushes logo and links to opposite ends */
+  align-items: center; /* Vertically centers the content */
+  padding: 10px 40px; /* Adds some spacing (top/bottom and left/right) */
+  background-color: #ffffff; /* White background */
+  border-bottom: 1px solid #e0e0e0; /* Adds a subtle line at the bottom */
 }
 
-.nav-links {
+/* Container for the logo and its text */
+.logo-container {
   display: flex;
-  list-style: none;
-  gap: 20px;
+  align-items: center; /* Aligns the logo image and text */
 }
 
-.nav-links li {
-  cursor: pointer;
-  font-weight: bold;
+/* THIS IS THE FIX FOR THE LOGO SIZE */
+.logo-img {
+  height: 70px; /* Set a specific height for the logo */
+  width: auto;  /* Allows the width to adjust automatically to maintain aspect ratio */
+  margin-right: 15px; /* Adds space between the logo and the text */
 }
 
-.nav-links li:hover {
-  color: #ffcc00;
+.logo-text h1 {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  margin: 0;
+  font-weight: 600;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+/* Styling for the navigation links */
+.nav-links ul {
+  list-style: none; /* Removes the bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Makes the links line up horizontally */
+  gap: 30px; /* Adds space between the links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: #0056b3; /* Changes color on hover */
 }

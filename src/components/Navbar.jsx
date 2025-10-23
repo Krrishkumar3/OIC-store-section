@@ -1,25 +1,31 @@
 import React from 'react';
-import './Navbar.css'; // Don't forget to create Navbar.css
- // Assuming you save the image as dtu-logo.png in the same directory
+import './Navbar.css';
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <img src="/dtu-logo.png" alt="DTU Logo" className="dtu-logo" />
-        <div className="brand-text">
-          <span className="university-name">Delhi Technological University</span>
-          <span className="department-name">OIC store section</span>
+    <nav className="navbar-container">
+      <div className="logo-container">
+        <img
+          src="/dtu-logo.png"
+          alt="Delhi Technological University Logo"
+          className="logo-img"
+          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://dtu.ac.in/images/logo.png'; }}
+        />
+        <div className="logo-text">
+          <h1>Delhi Technological University</h1>
+          <p>OIC store section</p>
         </div>
       </div>
-      <ul className="navbar-nav">
-        <li className="nav-item"><a href="https://dtu.ac.in/" className="nav-link">Home</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">About Us</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Policies</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Contact Us</a></li>
-      </ul>
+      <div className="nav-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Policies</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

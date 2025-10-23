@@ -1,41 +1,33 @@
-import React from "react";
-import "./Updates.css";
+import React from 'react';
+import './Updates.css';
 
-function Updates() {
+const Updates = () => {
   return (
-    <section className="updates-section">
-      <h2>Important Updates</h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.dtu.ac.in/admissions"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Accounts
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.dtu.ac.in/events/golden-pride-2024"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Miscellaneous
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.dtu.ac.in/scholarships"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Data entry
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div className="updates-wrapper">
+      <div className="updates-header">
+        IMPORTANT UPDATES
+      </div>
+      <div className="updates-content">
+        {/* For the scrolling effect, we use a simple marquee */}
+        <marquee behavior="scroll" direction="up" scrollamount="2" style={{ height: '100%' }}>
+          <ul>
+            <li>
+              <a href="#">Notification: Annual Fee structure for the students seeking admissions.</a>
+            </li>
+            <li>
+              <a href="#">Notification: R.1(B).17 revised Grading System.</a>
+            </li>
+            <li>
+              <a href="#">Information regarding Travel grant for PG/Ph.D students.</a>
+            </li>
+             <li>
+              <a href="#">Course Code for SEC/VAC/AEC of Integrated BSc-MSc.</a>
+            </li>
+          </ul>
+        </marquee>
+      </div>
+    </div>
   );
-}
+};
 
 export default Updates;

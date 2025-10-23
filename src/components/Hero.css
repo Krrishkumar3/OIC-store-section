@@ -1,79 +1,16 @@
-.hero-section {
-  position: relative;
-  height: 600px; /* Adjust height as needed */
-  background-image: url('/path/to/campus-image.jpg'); /* Your campus image */
-  background-size: cover;
-  background-position: center;
-  color: #fff; /* White text for contrast */
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center overlay */
+.hero-container {
+  display: flex; /* This is the key to the side-by-side layout */
+  justify-content: space-between; /* Puts space between the items */
+  padding: 2rem; /* Adds some space around the container */
+  gap: 2rem; /* Adds space between the slider and the updates */
+  min-height: 400px; /* Give it some height */
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.slider-container {
+  width: 65%; /* Assigns 65% of the space to the slider */
 }
 
-.hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Align items vertically */
-  max-width: 1200px; /* Max width for content */
-  width: 100%;
-  padding: 0 50px;
-}
-
-.hero-text-area {
-  flex: 2; /* Takes more space */
-  padding-right: 50px; /* Space between text and buttons */
-}
-
-.hero-text-area h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero-text-area p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  max-width: 600px; /* Constrain paragraph width */
-}
-
-.hero-buttons-area {
-  flex: 1; /* Takes less space */
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Space between buttons */
-}
-
-.hero-button {
-  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
-  color: #fff;
-  padding: 15px 25px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: #fff;
-}
-
-.hero-button .arrow {
-  font-size: 1.5em;
-  margin-left: 10px;
+.updates-container {
+  width: 35%; /* Assigns 35% of the space to the updates section */
+  border: 1px solid #ccc; /* Adds a border like the reference image */
 }
