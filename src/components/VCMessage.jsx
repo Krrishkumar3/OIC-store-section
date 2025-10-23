@@ -1,17 +1,26 @@
 import React from 'react';
 import './VCMessage.css';
-// 1. IMPORT the image from the assets folder.
-//    Make sure the filename 'vc-photo.jpg' is correct.
-import vcPhoto from '../assets/vc-photo.jpg'; 
 
-const VCMessage = () => {
+// Use files from public/ via absolute paths (e.g. /vc.png)
+const VCMessage = ({ imageSrc = '/prateeksharmadtu.png' }) => {
   return (
     <div className="vc-message-wrapper">
       <div className="vc-photo-container">
-        {/* 2. USE the imported variable in the src attribute. */}
-        <img 
-          src={vcPhoto}
+        <img
+          src={imageSrc}
           alt="Prof. Prateek Sharma, Vice Chancellor of DTU"
+          onError={(e) => {
+            // Try fallback to /vc.jpg (maybe user saved jpg), then remote image.
+            e.target.onerror = null;
+            const src = e.target.src || '';
+            if (src.endsWith('/prateeksharmadtu.png')) {
+              e.target.src = '/vc.jpg';
+            } else if (src.endsWith('/vc.jpg')) {
+              e.target.src = 'https://dtu.ac.in/wp-content/uploads/2023/12/vc.jpg';
+            } else {
+              e.target.src = '/prateeksharmadtu.png';
+            }
+          }}
         />
       </div>
       <div className="vc-text-container">

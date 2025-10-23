@@ -10,7 +10,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <VCMessage /> {/* <-- And make sure it's placed here */}
+  <VCMessage imageSrc={'/prateeksharmadtu.png'} /> {/* render VC image from public/prateeksharmadtu.png */}
       <Footer />
     </>
   );
