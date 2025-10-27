@@ -65,3 +65,10 @@
   line-height: 1;
   height: 40px;
 }
+/* In src/App.css */
+
+.vc-photo-container {
+  /* Adjust this value (start with 35px) until the photo aligns visually
+     with the main body text on the right */
+  margin-top: 35px; 
+}

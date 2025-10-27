@@ -97,3 +97,21 @@ html, body {
     min-width: auto;
   }
 }
+/* Add this to your existing CSS */
+.photo-container {
+    /* Existing styles for the container */
+    margin-top: 20px; /* Adjust this value as needed to move it down */
+}
+
+/* OR if you want to target the image directly */
+.photo-container img {
+    margin-top: 20px; /* Adjust this value as needed */
+}
+/* src/App.css */
+
+/* ... (Keep your existing styles) ... */
+
+.photo-container {
+  /* This margin pushes the photo container down from its original top position */
+  margin-top: 35px; /* Adjust this value (e.g., 20px, 35px, 50px) until the photo aligns visually with the start of the main text block (the paragraph about DTU). */
+}

@@ -1,53 +1,96 @@
+/* src/components/Navbar.css */
 .navbar-container {
-  display: flex;
-  justify-content: space-between; /* Pushes logo and links to opposite ends */
-  align-items: center; /* Vertically centers the content */
-  padding: 10px 40px; /* Adds some spacing (top/bottom and left/right) */
-  background-color: #ffffff; /* White background */
-  border-bottom: 1px solid #e0e0e0; /* Adds a subtle line at the bottom */
+    display: flex;
+    justify-content: space-between; /* Pushes logo and links to opposite ends */
+    align-items: center; /* Vertically centers the content */
+    padding: 10px 40px; /* Adds some spacing (top/bottom and left/right) */
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #e0e0e0; /* Adds a subtle line at the bottom */
 }
 
 /* Container for the logo and its text */
 .logo-container {
-  display: flex;
-  align-items: center; /* Aligns the logo image and text */
+    display: flex;
+    align-items: center; /* Aligns the logo image and text */
 }
 
 /* THIS IS THE FIX FOR THE LOGO SIZE */
 .logo-img {
-  height: 70px; /* Set a specific height for the logo */
-  width: auto;  /* Allows the width to adjust automatically to maintain aspect ratio */
-  margin-right: 15px; /* Adds space between the logo and the text */
+    height: 70px; /* Set a specific height for the logo */
+    width: auto;  /* Allows the width to adjust automatically to maintain aspect ratio */
+    margin-right: 15px; /* Adds space between the logo and the text */
 }
 
 .logo-text h1 {
-  font-size: 1.5rem; /* Adjust font size as needed */
-  margin: 0;
-  font-weight: 600;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin: 0;
+    font-weight: 600;
+    /* FIX: Ensure the header text doesn't wrap unnecessarily */
+    white-space: nowrap; 
 }
 
 .logo-text p {
-  margin: 0;
-  font-size: 1rem;
+    margin: 0;
+    font-size: 1rem;
+    /* FIX: Ensure the secondary text doesn't wrap unnecessarily */
+    white-space: nowrap; 
 }
 
 
 /* Styling for the navigation links */
 .nav-links ul {
-  list-style: none; /* Removes the bullet points */
-  margin: 0;
-  padding: 0;
-  display: flex; /* Makes the links line up horizontally */
-  gap: 30px; /* Adds space between the links */
+    list-style: none; /* Removes the bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the links line up horizontally */
+    gap: 30px; /* Adds space between the links */
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 1.1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 .nav-links a:hover {
-  color: #0056b3; /* Changes color on hover */
+    color: #0056b3; /* Changes color on hover */
+}
+
+/* --- ADDED RESPONSIVE LAYOUT FOR MOBILE SCREENS --- */
+@media (max-width: 800px) {
+    .navbar-container {
+        /* Stack the logo and nav links vertically */
+        flex-direction: column; 
+        align-items: flex-start; /* Align all items to the start (left) */
+        padding: 15px 20px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Add space below the logo before the links */
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem; /* Reduce font size on mobile */
+    }
+
+    .logo-text p {
+        font-size: 0.85rem; /* Reduce font size on mobile */
+    }
+
+    .nav-links {
+        width: 100%; /* Make nav links take full width */
+        padding-top: 5px;
+        border-top: 1px solid #eee; /* Add a separator line */
+    }
+
+    .nav-links ul {
+        /* Make links spread out or center on mobile */
+        justify-content: space-around; 
+        gap: 15px; /* Reduce gap on mobile */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Reduce link font size */
+    }
 }
