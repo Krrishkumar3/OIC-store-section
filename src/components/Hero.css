@@ -1,16 +1,39 @@
+/* src/components/Hero.css */
 .hero-container {
-  display: flex; /* This is the key to the side-by-side layout */
-  justify-content: space-between; /* Puts space between the items */
-  padding: 2rem; /* Adds some space around the container */
-  gap: 2rem; /* Adds space between the slider and the updates */
-  min-height: 400px; /* Give it some height */
+    display: flex; /* This is the key to the side-by-side layout */
+    justify-content: space-between; /* Puts space between the items */
+    padding: 2rem; /* Adds some space around the container */
+    gap: 2rem; /* Adds space between the slider and the updates */
+    min-height: 400px; /* Give it some height */
+    max-width: 1200px; /* Added max-width for better centering */
+    margin: 0 auto; /* Center the container */
 }
 
 .slider-container {
-  width: 65%; /* Assigns 65% of the space to the slider */
+    width: 65%; /* Assigns 65% of the space to the slider */
 }
 
 .updates-container {
-  width: 35%; /* Assigns 35% of the space to the updates section */
-  border: 1px solid #ccc; /* Adds a border like the reference image */
+    width: 35%; /* Assigns 35% of the space to the updates section */
+    border: 1px solid #ccc; /* Adds a border like the reference image */
+}
+
+/* --- FIX: Added Responsive Layout for Mobile Screens --- */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column; /* Stack vertically on small screens */
+        padding: 1rem; /* Reduce padding */
+        gap: 1.5rem; /* Reduce gap */
+        min-height: auto;
+    }
+
+    .slider-container,
+    .updates-container {
+        width: 100%; /* Each takes full width */
+        height: auto; /* Allow height to adjust */
+    }
+    
+    .slider-container {
+        min-height: 250px; /* Ensure slider has a minimum visible height on mobile */
+    }
 }

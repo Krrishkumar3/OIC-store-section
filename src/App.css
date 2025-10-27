@@ -1,55 +1,55 @@
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
 }
 
 #root {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
 }
 
 /* src/App.css */
@@ -57,61 +57,10 @@ html, body {
 /* Keep your existing styles and add this */
 
 .main-content {
-  display: flex;
-  justify-content: space-around; /* This will space out the two columns */
-  padding: 2rem;
-  gap: 2rem; /* Adds space between the columns */
+    display: flex;
+    justify-content: space-around; /* This will space out the two columns */
+    padding: 2rem;
+    gap: 2rem; /* Adds space between the columns */
 }
 
-/* Layout for the top area: news (left) and slider (right) */
-.main-layout {
-  display: flex;
-  gap: 20px;
-  align-items: stretch; /* make children same height */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.news-section {
-  width: 33%;
-  min-width: 280px;
-  /* fix height to match slider and clip overflow */
-  height: 420px;
-  overflow: hidden;
-}
-
-.slider-container {
-  width: 67%;
-  height: 420px; /* match the news column height */
-}
-
-/* Responsive: stack on smaller screens */
-@media (max-width: 900px) {
-  .main-layout {
-    flex-direction: column;
-  }
-
-  .news-section, .slider-container {
-    width: 100%;
-    min-width: auto;
-  }
-}
-/* Add this to your existing CSS */
-.photo-container {
-    /* Existing styles for the container */
-    margin-top: 20px; /* Adjust this value as needed to move it down */
-}
-
-/* OR if you want to target the image directly */
-.photo-container img {
-    margin-top: 20px; /* Adjust this value as needed */
-}
-/* src/App.css */
-
-/* ... (Keep your existing styles) ... */
-
-.photo-container {
-  /* This margin pushes the photo container down from its original top position */
-  margin-top: 35px; /* Adjust this value (e.g., 20px, 35px, 50px) until the photo aligns visually with the start of the main text block (the paragraph about DTU). */
-}
+/* Removed old conflicting layout code from here */

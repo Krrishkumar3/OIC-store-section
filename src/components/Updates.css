@@ -1,38 +1,40 @@
+/* src/components/Updates.css */
 .updates-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .updates-header {
-  background-color: #002147; /* Dark blue color */
-  color: white;
-  font-weight: bold;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.2rem;
+    background-color: #002147; /* Dark blue color */
+    color: white;
+    font-weight: bold;
+    padding: 1rem 0.5rem; /* Added padding, especially on sides */
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.2; /* Ensure text wraps if needed */
 }
 
 .updates-content {
-  flex-grow: 1; /* Allows this section to fill the available space */
-  padding: 1rem;
-  overflow: hidden; /* Hides anything that overflows the container */
+    flex-grow: 1; /* Allows this section to fill the available space */
+    padding: 1rem;
+    overflow: hidden; /* Hides anything that overflows the container */
 }
 
 .updates-content ul {
-  list-style-type: disc;
-  padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .updates-content li {
-  margin-bottom: 15px; /* Adds space between notifications */
+    margin-bottom: 15px; /* Adds space between notifications */
 }
 
 .updates-content a {
-  text-decoration: none;
-  color: #003366;
+    text-decoration: none;
+    color: #003366;
 }
 
 .updates-content a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
