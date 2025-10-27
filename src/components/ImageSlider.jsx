@@ -16,10 +16,10 @@ import './ImageSlider.css';
 const ImageSlider = () => {
   // Use public or remote images so the slider works without local assets
   const slides = [
-    'https://dtu.ac.in/images/background/banner1.jpg',
-    'https://dtu.ac.in/images/background/banner2.jpg',
-    'https://dtu.ac.in/images/background/banner3.jpg',
-  ];
+    '/banner1.png', // Assuming banner1.jpg is in your public folder
+    '/banner2.png', // Assuming banner2.jpg is in your public folder
+    '/banner3.png', // Assuming banner3.jpg is in your public folder
+  ];
 
   return (
     <div className="slider-container">
