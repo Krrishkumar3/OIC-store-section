@@ -1,101 +1,71 @@
-/* src/components/Navbar.css */
-.navbar-container {
-    display: flex;
-    justify-content: space-between; /* Pushes logo and links to opposite ends */
-    align-items: center; /* Vertically centers the content */
-    padding: 10px 40px; /* Adds some spacing (top/bottom and left/right) */
-    background-color: #ffffff; /* White background */
-    border-bottom: 1px solid #e0e0e0; /* Adds a subtle line at the bottom */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8d0000;
+  color: white;
+  padding: 0.8rem 1.5rem;
 }
 
-/* Container for the logo and its text */
-.logo-container {
-    display: flex;
-    align-items: center; /* Aligns the logo image and text */
+.logo-section {
+  display: flex;
+  align-items: center;
 }
 
-/* THIS IS THE FIX FOR THE LOGO SIZE */
-.logo-img {
-    height: 70px; /* Set a specific height for the logo */
-    width: auto;  /* Allows the width to adjust automatically to maintain aspect ratio */
-    margin-right: 15px; /* Adds space between the logo and the text */
+.logo {
+  height: 55px;
+  margin-right: 10px;
 }
 
 .logo-text h1 {
-    font-size: 1.5rem; /* Adjust font size as needed */
-    margin: 0;
-    font-weight: 600;
-    /* REMOVED white-space: nowrap; to allow text to wrap */
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 .logo-text p {
-    margin: 0;
-    font-size: 1rem;
-    /* REMOVED white-space: nowrap; to allow text to wrap */
+  margin: 0;
+  font-size: 0.9rem;
 }
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-/* Styling for the navigation links */
-.nav-links ul {
-    list-style: none; /* Removes the bullet points */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Makes the links line up horizontally */
-    gap: 30px; /* Adds space between the links */
+.nav-links li {
+  position: relative;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.nav-links a:hover {
-    color: #0056b3; /* Changes color on hover */
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: white;
+  min-width: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-/* --- FIX: Updated Responsive Layout for Mobile Screens --- */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 15px; /* Reduced padding on sides */
-    }
+.dropdown-content a {
+  color: #8d0000;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
 
-    .logo-container {
-        margin-bottom: 5px;
-        width: 100%; /* Ensure logo container takes full width for text wrapping */
-        align-items: flex-start; /* Align logo and text to the top left */
-    }
-    
-    .logo-img {
-        height: 50px; /* Smaller logo for mobile */
-        margin-right: 10px;
-    }
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
 
-    .logo-text h1 {
-        font-size: 1.1rem; /* Smaller main heading */
-        line-height: 1.2;
-        word-break: break-word; /* Ensure long words can break */
-    }
-
-    .logo-text p {
-        font-size: 0.8rem; /* Smaller subtitle */
-    }
-
-    .nav-links {
-        width: 100%;
-        padding-top: 5px;
-        border-top: 1px solid #eee;
-    }
-
-    .nav-links ul {
-        justify-content: space-around;
-        gap: 5px; /* Minimal gap */
-    }
-
-    .nav-links a {
-        font-size: 0.85rem; /* Smaller link font size */
-    }
+.dropdown:hover .dropdown-content {
+  display: block;
 }
