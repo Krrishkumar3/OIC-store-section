@@ -12,16 +12,16 @@ const Updates = () => {
         <marquee behavior="scroll" direction="up" scrollamount="2" style={{ height: '100%' }}>
           <ul>
             <li>
-              <a href="#">Notification: Annual Fee structure for the students seeking admissions.</a>
+              <a href="#">tender passed</a>
             </li>
             <li>
-              <a href="#">Notification: R.1(B).17 revised Grading System.</a>
+              <a href="#">list of applicants</a>
             </li>
             <li>
-              <a href="#">Information regarding Travel grant for PG/Ph.D students.</a>
+              <a href="#">money spent on departments</a>
             </li>
              <li>
-              <a href="#">Course Code for SEC/VAC/AEC of Integrated BSc-MSc.</a>
+              <a href="#">department wise money alloted</a>
             </li>
           </ul>
         </marquee>
