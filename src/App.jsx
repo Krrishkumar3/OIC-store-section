@@ -14,44 +14,50 @@ import DownloadGuideline from "./pages/DownloadGuideline";
 import Staff from "./pages/Staff";
 import Policies from "./pages/Policies";
 import Contact from "./pages/Contact";
+// --- NEW IMPORT ---
+import AdminLogin from "./pages/AdminLogin"; 
+// ------------------
 
-import "./App.css"; // 👈 Make sure this import is here
+import "./App.css";
 
 function App() {
-  return (
-    <div className="page-wrapper">
-      <Navbar />
-      <main className="content">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <VCMessage imageSrc={"/prateeksharmadtu.png"} />
-              </>
-            }
-          />
+  return (
+    <div className="page-wrapper">
+      <Navbar />
+      <main className="content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <VCMessage imageSrc={"/prateeksharmadtu.png"} />
+              </>
+            }
+          />
 
-          {/* Auction and its subsections */}
-          <Route path="/auction" element={<Auction />} />
-          <Route path="/auction/notice" element={<AuctionNotice />} />
-          <Route path="/auction/guideline" element={<AuctionGuideline />} />
+          {/* Auction and its subsections */}
+          <Route path="/auction" element={<Auction />} />
+          <Route path="/auction/notice" element={<AuctionNotice />} />
+          <Route path="/auction/guideline" element={<AuctionGuideline />} />
 
-          {/* Download and its subsections */}
-          <Route path="/download" element={<Download />} />
-          <Route path="/download/sop" element={<SOP />} />
-          <Route path="/download/guideline" element={<DownloadGuideline />} />
+          {/* Download and its subsections */}
+          <Route path="/download" element={<Download />} />
+          <Route path="/download/sop" element={<SOP />} />
+          <Route path="/download/guideline" element={<DownloadGuideline />} />
 
-          {/* Other pages */}
-          <Route path="/staff" element={<Staff />} />
-          <Route path="/policies" element={<Policies />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  );
+          {/* --- NEW ADMIN ROUTE --- */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+
+          {/* Other pages */}
+          <Route path="/staff" element={<Staff />} />
+          <Route path="/policies" element={<Policies />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
