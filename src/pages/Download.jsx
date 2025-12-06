@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './Download.css';
+// Assuming the CSS file is named Download.css or similar
+import './Download.css'; 
 
-const API_BASE_URL = 'http://localhost:5000'; // Make sure this is correct
+const API_BASE_URL = 'http://localhost:5000'; 
 
 const Download = () => {
     const [files, setFiles] = useState([]);
@@ -41,19 +42,33 @@ const Download = () => {
                 <div className="documents-list">
                     {files.map((file) => (
                         <div key={file._id} className="document-item">
-                            <div className="document-details">
+                            {/* DETAILS SECTION: Fixed alignment for text */}
+                            <div className="document-details"> 
                                 <strong>{file.filename}</strong>
                                 <small>Uploaded: {new Date(file.uploadedAt).toLocaleDateString()}</small>
                             </div>
-                            {/* The download link uses the relative path saved in the database */}
-                            <a 
-                                href={`${API_BASE_URL}${file.filepath}`} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="download-btn"
-                            >
-                                Download
-                            </a>
+                            
+                            {/* BUTTONS SECTION: Aligned to the right */}
+                            <div className="document-actions">
+                                {/* VIEW BUTTON: Opens file in a new tab */}
+                                <a 
+                                    href={`${API_BASE_URL}${file.filepath}`} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="action-btn view-btn" // Added view-btn class
+                                >
+                                    View
+                                </a>
+                                
+                                {/* DOWNLOAD BUTTON: Uses the 'download' attribute to prompt a file save */}
+                                <a 
+                                    href={`${API_BASE_URL}${file.filepath}`} 
+                                    download={file.filename} // Prompts the browser to download the file with its original name
+                                    className="action-btn download-btn" // Added download-btn class
+                                >
+                                    Download
+                                </a>
+                            </div>
                         </div>
                     ))}
                 </div>
