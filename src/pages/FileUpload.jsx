@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './FileUpload.css'; 
 
 // Define the base URL for the backend API
-const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'https://oic-store-backend.onrender.com';
 
 const FileUpload = () => {
     const [selectedFile, setSelectedFile] = useState(null);

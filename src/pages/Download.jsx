@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // Assuming the CSS file is named Download.css or similar
 import './Download.css'; 
 
-const API_BASE_URL = 'http://localhost:5000'; 
+const API_BASE_URL = 'https://oic-store-backend.onrender.com'; 
 
 const Download = () => {
     const [files, setFiles] = useState([]);
