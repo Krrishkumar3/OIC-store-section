@@ -14,11 +14,14 @@ import DownloadGuideline from "./pages/DownloadGuideline";
 import Staff from "./pages/Staff";
 import Policies from "./pages/Policies";
 import Contact from "./pages/Contact";
-// --- NEW IMPORT ---
+// --- NEW IMPORTS ---
 import AdminLogin from "./pages/AdminLogin"; 
+import FileUpload from "./pages/FileUpload"; // <--- Ensure this import is present
 // ------------------
 
 import "./App.css";
+
+import AdminDashboard from "./pages/AdminDashboard";
 
 function App() {
   return (
@@ -46,13 +49,15 @@ function App() {
           <Route path="/download/sop" element={<SOP />} />
           <Route path="/download/guideline" element={<DownloadGuideline />} />
 
-          {/* --- NEW ADMIN ROUTE --- */}
+          {/* --- ADMIN ROUTES (Keep these only once) --- */}
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/upload" element={<FileUpload />} /> 
 
           {/* Other pages */}
           <Route path="/staff" element={<Staff />} />
           <Route path="/policies" element={<Policies />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </main>
       <Footer />
