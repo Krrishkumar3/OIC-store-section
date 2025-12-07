@@ -1,0 +1,102 @@
+/* src/components/PreFooter.css */
+
+/* Target the main wrapper and enforce full width and deep blue color */
+.oic-main-footer {
+    background-color: #003366; /* Deep blue color */
+    color: #ffffff;
+    padding: 30px 0; /* Remove horizontal padding, keep vertical padding */
+    margin: 0; 
+    width: 100%; 
+    font-family: sans-serif;
+}
+
+/* Center the content of the columns within the full-width wrapper */
+.footer-content-cols {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; /* Internal padding to keep text off screen edges */
+    flex-wrap: wrap; 
+}
+
+.footer-col {
+    flex: 1; 
+    min-width: 250px; 
+    margin-bottom: 20px;
+    padding-right: 15px;
+}
+
+/* Headings and Titles */
+.footer-col h4 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3d6899; 
+    padding-bottom: 5px;
+}
+
+/* Paragraphs (like address and emails) */
+.footer-col p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Links */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+    color: #c0c0c0;
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
+.social-icons i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.social-icons i:hover {
+    color: #c0c0c0;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .footer-content-cols {
+        flex-direction: column;
+        padding: 0 10px; 
+    }
+
+    .footer-col {
+        min-width: 100%;
+        padding-right: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #3d6899; 
+    }
+    
+    .footer-col:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}

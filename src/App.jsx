@@ -18,7 +18,7 @@ import Contact from "./pages/Contact";
 import AdminLogin from "./pages/AdminLogin"; 
 import FileUpload from "./pages/FileUpload"; // <--- Ensure this import is present
 // ------------------
-
+import PreFooter from "./components/PreFooter";
 import "./App.css";
 
 import AdminDashboard from "./pages/AdminDashboard";
@@ -60,6 +60,7 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
       </main>
+      <PreFooter />
       <Footer />
     </div>
   );
