@@ -13,7 +13,8 @@ const AdminLogin = () => {
         setMessage('');
 
         try {
-            const response = await fetch('https://oic-store-backend.onrender.com', {
+            // CRITICAL FIX: Appending /api/login to the Render URL
+            const response = await fetch('https://oic-store-backend.onrender.com/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ const AdminLogin = () => {
                 localStorage.setItem('adminToken', data.token);
                 setMessage({ type: 'success', text: 'Login successful! Redirecting to dashboard...' });
                 
-                // Redirect to the FileUpload page upon successful login
+                // Redirect to the dashboard page upon successful login
                 setTimeout(() => {
                     navigate('/admin/dashboard'); 
                 }, 1000);
