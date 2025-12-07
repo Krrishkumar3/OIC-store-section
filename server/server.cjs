@@ -20,7 +20,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key'; // CHANG
 const allowedOrigins = [
     'http://localhost:5173', // For local testing
     // CRITICAL: Replace this with your actual Vercel domain!
-    'https://oic-store-backend.onrender.com' 
+    'https://oic-store-section.vercel.app' 
 ];
 
 const corsOptions = {
