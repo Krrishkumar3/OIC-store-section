@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
-const cors = require('cors');
+const cors = require('cors'); // Already imported
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
@@ -12,8 +12,35 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'your_default_secret_key'; // CHANGE THIS
 
+// ===================================
+// --- CRITICAL CORS CONFIGURATION ---
+// ===================================
+
+// 1. Define the origins that are allowed to access your API
+const allowedOrigins = [
+    'http://localhost:5173', // For local testing
+    // CRITICAL: Replace this with your actual Vercel domain!
+    'https://oic-store-section.vercel.app' 
+];
+
+const corsOptions = {
+  // Function checks if the request origin is in our allowed list
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true); 
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = `The CORS policy for this site does not allow access from the specified Origin: ${origin}`;
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 // --- MIDDLEWARE ---
-app.use(cors()); 
+// Apply the custom CORS configuration to allow Vercel access
+app.use(cors(corsOptions)); 
 app.use(express.json());
 // Serve the uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -72,7 +99,7 @@ const isAdmin = (req, res, next) => {
 };
 
 // ===================================
-//              API ROUTES
+//              API ROUTES
 // ===================================
 
 // 1. ADMIN LOGIN (Public)
