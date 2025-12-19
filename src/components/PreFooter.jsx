@@ -14,39 +14,11 @@ const PreFooter = () => {
           <p>Bawana Road, 110042, New Delhi</p>
         </div>
 
-        {/* Column 2: Permalinks */}
-        <div className="footer-col">
-          <h4>Permalinks</h4>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/courses">Courses</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </div>
-
-        {/* Column 3: Other links */}
-        <div className="footer-col">
-          <h4>Other links</h4>
-          <ul>
-            <li><a href="https://iccr.gov.in/" target="_blank" rel="noopener noreferrer">ICCR portal</a></li>
-            <li><a href="https://dtu.admission.nic.in/" target="_blank" rel="noopener noreferrer">DTU admission portal</a></li>
-            <li><a href="https://dasa.nic.in/" target="_blank" rel="noopener noreferrer">DASA portal</a></li>
-            <li><a href="#">How to Apply</a></li>
-          </ul>
-        </div>
 
         {/* Column 4: Contact Us */}
         <div className="footer-col">
           <h4>Contact Us</h4>
-          <p>oia@dtu.ac.in</p>
-          <p>international.dtu@dtu.ac.in</p>
-          <div className="social-icons">
-            <i className="fab fa-facebook-f"></i>
-            <i className="fab fa-twitter"></i>
-            <i className="fab fa-instagram"></i>
-            <i className="fab fa-linkedin-in"></i>
-          </div>
+          <p>store@dtu.ac.in</p>
         </div>
       </div>
     </div>
