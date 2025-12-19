@@ -1,0 +1,61 @@
+.staff-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.staff-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #003366; /* Matches DTU Dark Blue */
+    padding-bottom: 1rem;
+}
+
+.staff-header h1 {
+    color: #003366;
+    text-transform: uppercase;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.staff-table th {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.staff-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.staff-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.staff-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.staff-name {
+    font-weight: bold;
+    color: #003366;
+}
+
+.staff-designation {
+    font-style: italic;
+    color: #666;
+}
