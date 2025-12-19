@@ -1,0 +1,102 @@
+.contact-page-container {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-main-heading {
+    color: #003366;
+    border-bottom: 3px solid #b32025; /* DTU Red accent */
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Graphic Placeholder Styling */
+.contact-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 180px;
+    height: 180px;
+    border: 8px solid #f0f4f8;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #003366;
+    background: #f9f9f9;
+}
+
+/* Details Section Styling */
+.contact-details-box {
+    flex: 2;
+}
+
+.officer-title {
+    color: #003366;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.department-sub {
+    color: #b32025;
+    font-weight: bold;
+    margin-top: 0.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.address-info {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.contact-links p {
+    margin: 0.3rem 0;
+}
+
+.contact-links a {
+    color: #b32025;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.service-motto {
+    text-align: center;
+    margin-top: 3rem;
+    font-style: italic;
+    color: #003366;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
